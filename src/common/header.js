@@ -1,0 +1,52 @@
+export const equityHeader =  [
+  {
+    name:'code',
+    value:"SC_CODE"
+  },
+  {
+    name:'name',
+    value:"SC_NAME"
+  },
+  {
+    name:'group',
+    value:"SC_GROUP"
+  },
+  {
+    name:'prevclose',
+    value:"PREVCLOSE"
+  },
+  {
+    name:'open',
+    value:"OPEN"
+  },
+  {
+    name:'high',
+    value:"HIGH"
+  },
+  {
+    name:'low',
+    value:"LOW"
+  },
+  {
+    name:'close',
+    value:"CLOSE"
+  },
+  {
+    name:'last',
+    value:"LAST"
+  },
+  {
+    name:'no_of_shrs',
+    value:"NO_OF_SHRS"
+  },
+  {
+    name:'net_turnov',
+    value:"NET_TURNOV"
+  },
+  {
+    name:'no_trades',
+    value:"NO_TRADES"
+  },
+]
+
+export default {equityHeader}
