@@ -1,52 +1,52 @@
-export const equityHeader =  [
+export const equityHeaders =  [
   {
-    name:'code',
+    name:'Code',
     value:"SC_CODE"
   },
   {
-    name:'name',
+    name:'Name',
     value:"SC_NAME"
   },
   {
-    name:'group',
+    name:'Group',
     value:"SC_GROUP"
   },
   {
-    name:'prevclose',
+    name:'Prevclose',
     value:"PREVCLOSE"
   },
   {
-    name:'open',
+    name:'Open',
     value:"OPEN"
   },
   {
-    name:'high',
+    name:'High',
     value:"HIGH"
   },
   {
-    name:'low',
+    name:'Low',
     value:"LOW"
   },
   {
-    name:'close',
+    name:'Close',
     value:"CLOSE"
   },
   {
-    name:'last',
+    name:'Last',
     value:"LAST"
   },
   {
-    name:'no_of_shrs',
+    name:'Shares',
     value:"NO_OF_SHRS"
   },
   {
-    name:'net_turnov',
+    name:'TURNOV',
     value:"NET_TURNOV"
   },
   {
-    name:'no_trades',
+    name:'Trades',
     value:"NO_TRADES"
   },
 ]
 
-export default {equityHeader}
+export default {equityHeaders}
