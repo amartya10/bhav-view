@@ -1,15 +1,16 @@
 import { createWebHistory, createRouter } from "vue-router";
 
 const routes = [
-    {
-        path: "",
-        name: "home",
-    },
+	{
+		name:"home",
+		path: "/",
+		component: ()=> import("@/views/Equity"),
+	},
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
+	history: createWebHistory(),
+	routes,
 });
 
 export default router;
