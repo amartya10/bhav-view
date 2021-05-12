@@ -49,6 +49,7 @@ export default {
 
 		}
 	},
+	emits:["update:page","update:limit",]
 }
 </script>
 
