@@ -49,7 +49,7 @@ export default {
 
 		}
 	},
-	emits:["update:page","update:limit",]
+	emits:["update:page","update:limit"]
 }
 </script>
 

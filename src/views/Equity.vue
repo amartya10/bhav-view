@@ -2,7 +2,7 @@
 	<input v-model="query" placeholder="search script code,name">
 	<input v-model="date" type="date" name="EquityDate" :max="maxDate()">
 	<button @click="exportE">export</button>
-	<VPagination :page="page" :limit="limit" :count="count" style="width: auto">
+	<VPagination v-model:page="page"  v-model:limit="limit" v-model:count="count" style="width: auto">
 	</VPagination>
 	<VTable :headers="headers" :items="equities" @select="select"></VTable>
 
