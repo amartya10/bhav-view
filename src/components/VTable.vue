@@ -44,7 +44,17 @@ export default {
 </script>
 
 <style>
-
+.table {
+	width: 100%;
+	padding: 0px;
+	background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+	border-spacing: 0px;
+	border-collapse: separate;
+	caption-side: top;
+}
+tr {
+	text-align: right;
+}
 </style>
 <!-- 
 RENDERE DATA 
