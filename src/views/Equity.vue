@@ -1,14 +1,18 @@
 <template>
-	<input v-model="query" placeholder="search script code,name">
-	<input v-model="date" type="date" name="EquityDate" :max="maxDate()">
-	<button @click="exportE">export</button>
-	<VPagination v-model:page="page"  v-model:limit="limit" v-model:count="count" style="width: auto">
-	</VPagination>
-	<VTable :headers="headers" :items="equities" @select="select"></VTable>
-
+	<div ckass ="main">
+		<div class ="market-date">
+			<h1>Market Today </h1>
+		</div>
+		<input v-model="query" placeholder="search script code,name">
+		<input v-model="date" type="date" name="EquityDate" :max="maxDate()">
+		<button @click="exportE">export</button>
+		<VPagination v-model:page="page"  v-model:limit="limit" v-model:count="count" style="width: auto">
+		</VPagination>
+		<VTable :headers="headers" :items="equities" @select="select"></VTable>
+	</div>
 </template>
 
-<script>
+	<script>
 import VTable from '@/components/VTable'
 import VPagination from '@/components/VPagination'
 import { mapGetters } from "vuex";
@@ -133,6 +137,25 @@ export default {
 }	
 	
 </script>
+
+<style scoped>
+.market-date{
+	border: 1px solid rgb(236, 239, 241);
+	box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
+	width: auto;
+	border-radius: 0px;
+	overflow-x: auto;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 1180px;
+    padding: 24px 20px;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+}
+</style>
 <!-- 
 
 TODO
