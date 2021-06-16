@@ -2,15 +2,19 @@
 	<div class="container">
 		<main class ="main">
 			<section>
-			<div class ="market-date">
-				<h1>Market Today </h1>
-			</div>
-			<input v-model="query" placeholder="search script code,name">
-			<input v-model="date" type="date" name="EquityDate" :max="maxDate()">
-			<button @click="exportE">export</button>
-			<VPagination v-model:page="page"  v-model:limit="limit" v-model:count="count" style="width: auto">
-			</VPagination>
-			<VTable :headers="headers" :items="equities" @select="select"></VTable>
+				<div class= "marketSearch">
+					<div class ="market-date">
+						<h1>Market Today </h1>
+					</div>
+					<div class="market-search">
+						<input class = "market-search-input" v-model="query" placeholder="search script code,name">
+					</div>
+				</div>
+				<input v-model="date" type="date" name="EquityDate" :max="maxDate()">
+				<button @click="exportE">export</button>
+				<VPagination v-model:page="page"  v-model:limit="limit" v-model:count="count" style="width: auto">
+				</VPagination>
+				<VTable :headers="headers" :items="equities" @select="select"></VTable>
 			</section>
 		</main>
 	</div>
@@ -164,12 +168,32 @@ export default {
     padding: 24px 20px;
     background: rgb(255, 255, 255) none repeat scroll 0% 0%;
 }
+.marketSearch{
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
 .market-date{
-	border: 1px solid rgb(236, 239, 241);
+	/* border: 1px solid rgb(236, 239, 241); */
 	box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
 	width: auto;
 	border-radius: 0px;
 	overflow-x: auto;
+	font-size: 24px;
+	font-weight: 500;
+}
+.market-search{
+	width:auto;
+	border: 1px solid rgb(236, 239, 241);
+	font-size: 24px;
+}
+.market-search-input {
+	text-align: left;
+	height: 100%;
+	width: 100%;
+	font-size: 24px;
+	padding: 0px 15px;
+
 }
 
 </style>
