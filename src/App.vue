@@ -9,6 +9,7 @@
 <script>
 import AppHeader from "@/components/AppHeader"
 import AppFooter from "@/components/AppFooter"
+import '@/assets/style.css'
 
 export default {
   name: 'App',

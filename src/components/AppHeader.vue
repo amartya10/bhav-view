@@ -1,12 +1,19 @@
 <template>
 	<header>
-		<nav>
-			<div>
+		<div class="head-items">
+			<div class="head-item">
 				<router-link class="navbar-brand" :to="{ name: 'home' }">
-					bhav
+					bhavcopy
 				</router-link>
 			</div>
-		</nav>	
+			<!-- <div class="head-item">
+				<span>g </span>
+
+			</div>
+			<div class="head-item">
+				<span>k</span>
+			</div> -->
+		</div>
 	</header>
 </template>
 
@@ -19,10 +26,24 @@ export default {
 <style scoped>
 
 header { 
+	display: flex;
+	flex-shrink: 0;	
 	padding: 20px;
-	background: #1881d17b;
-	color: white;
-	font-size: 28px;
+	background: #f8f8f87b;
+	color: black;
+	font-size: 24px;
 	width: 100%;
+}
+.head-items {
+	max-width: 1180px;
+    display: flex;
+    padding: 0px 20px;
+	align-items:center;
+    box-sizing: content-box;
+}
+.head-item {
+	display: flex;
+	align-items: center;
+	padding-bottom: 3px;
 }
 </style>>
