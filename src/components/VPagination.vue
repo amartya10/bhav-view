@@ -1,13 +1,21 @@
 <template>	
 	<div class="table-operations">
 		<div class="table-operation change-page">
-			
+			<div class="item">
 				<button v-bind:class= "page <= 1 ? 'hide' : 'show'" @click= "page -1 > 0 ? changePage(page - 1): pass"> Previous </button>
-				<label for="page"> Page</label>
-				<input disabled type="Number" :value="page"  class="page" id="page" min="1" :max="maxPage()"/>
 
+			</div>
+			<div class="item">
+				<input disabled type="Number" :value="page"  class="page" id="page" min="1" :max="maxPage()"/>
+			</div>
+			<div class="item">
 				<button v-bind:class= "page > maxPage() ?'hide' : 'show'" @click= "page > maxPage() 
 					?pass :changePage(page + 1)"> Next </button>
+
+			</div>
+				
+
+			
 		</div>
 		
 		<div class="table-operation limit">
@@ -71,6 +79,12 @@ export default {
 	padding: 10px 0px;
 	margin: 10px 0px;
 }
+.change-page{
+	display: flex;
+}
+.change-page .item {
+	margin: 0 5px;
+}
 .change-page button{
 	appearance: none;
 	border: 0;
@@ -84,7 +98,6 @@ export default {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
-  disabled:true;
 }
 .change-page button:hover {
   background: #1d49aa;
