@@ -7,11 +7,11 @@
 						<h1>Market Today </h1>
 					</div>
 					<div class="market-search">
-						<input class = "market-search-input" v-model="query" placeholder="search script code,name">
+						<input class = "market-search-input" v-model="query" placeholder="search ">
 					</div>
 				</div>
 				<input v-model="date" type="date" name="EquityDate" :max="maxDate()">
-				<button @click="exportE">export</button>
+				<button @click="exportE">Export</button>
 				<VPagination v-model:page="page"  v-model:limit="limit" v-model:count="count" style="width: auto">
 				</VPagination>
 				<VTable :headers="headers" :items="equities" @select="select"></VTable>
