@@ -6,7 +6,7 @@
 
 			</div>
 			<div class="item">
-				<input disabled type="Number" :value="page"  class="page" id="page" min="1" :max="maxPage()"/>
+				<input  type="number" :value="page"  class="page" id="page" :min="1" :max="maxPage()"/>
 			</div>
 			<div class="item">
 				<button v-bind:class= "page > maxPage() ?'hide' : 'show'" @click= "page > maxPage() 
@@ -81,6 +81,9 @@ export default {
 }
 .change-page{
 	display: flex;
+	flex-direction: row;
+	flex: 0 0 20vw;
+	
 }
 .change-page .item {
 	margin: 0 5px;
@@ -108,5 +111,22 @@ export default {
   outline: none;
   box-shadow: 0 0 0 4px #cbd6ee;
 }
-
+.change-page .page {
+font-size: 20px;
+  padding: 0px 10px;
+  border-radius: 4px;
+  outline: none;
+  text-align: center;
+  width:70%;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
 </style>
