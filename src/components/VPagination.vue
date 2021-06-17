@@ -18,14 +18,14 @@
 			
 		</div>
 		
-		<div class="table-operation limit">
-			<label for="limt">Show</label>
-			<select :value="limit" @change="changeLimit">
-				<option value=25>25</option>
-				<option value=50>50</option>
-				<option value=75>75</option>
-				<option value=100>100</option>
-			</select>
+		<div class="table-operation limit">	
+				<label for="limt">Show</label>
+				<select :value="limit" @change="changeLimit">
+					<option value=25>25</option>
+					<option value=50>50</option>
+					<option value=75>75</option>
+					<option value=100>100</option>
+				</select>
 		</div>
 	</div>
 
@@ -91,10 +91,12 @@ export default {
 .change-page button{
 	appearance: none;
 	border: 0;
-	border-radius: 5px;
+	border-radius: 0px;
 	background: #4676D7;
 	color: #fff;
 	padding: 5px 20px;
+	height: 100%;
+
 }
 
 .change-page .hide   {
@@ -128,5 +130,25 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="number"] {
 	-moz-appearance: textfield;
+}
+.limit {
+	display: flex;
+	align-items: center;
+
+
+}
+.limit * {
+	margin: 0px 5px;
+}
+
+select {
+	border-radius: 0px;
+	height: 100%;
+	width: 100%;
+	background: #c5d0e7;
+
+}
+select option {
+	background: #c5d0e7;
 }
 </style>
