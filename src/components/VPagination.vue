@@ -98,6 +98,8 @@ export default {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
+  pointer-events: none;
+
 }
 .change-page button:hover {
   background: #1d49aa;
