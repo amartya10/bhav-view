@@ -1,20 +1,24 @@
-<template>
-	<label for="page"> Page</label>
-
-	<button v-if = "page > 1" @click= "changePage(page - 1)">prev</button>
-
-	<input disabled type="Number" :value="page"  class="page" id="page" min="1" :max="maxPage()"/>
-
-	<button v-if = "page < maxPage()" @click= "changePage(page + 1)">next</button>
-
-	<label for="limt">Limit</label>
-
-	<select :value="limit" @change="changeLimit">
-		<option value=25>25</option>
-		<option value=50>50</option>
-		<option value=75>75</option>
-		<option value=100>100</option>
-	</select>
+<template>	
+	<div class="table-operations">
+		<div class="table-operation change-page">
+			
+				<button v-if = "page > 1" @click= "changePage(page - 1)"> Previous </button>
+				<label for="page"> Page</label>
+				<input disabled type="Number" :value="page"  class="page" id="page" min="1" :max="maxPage()"/>
+		
+				<button v-if = "page < maxPage()" @click= "changePage(page + 1)"> Next </button>
+		</div>
+		
+		<div class="table-operation limit">
+			<label for="limt">Show</label>
+			<select :value="limit" @change="changeLimit">
+				<option value=25>25</option>
+				<option value=50>50</option>
+				<option value=75>75</option>
+				<option value=100>100</option>
+			</select>
+		</div>
+	</div>
 
 </template>
 
@@ -52,5 +56,38 @@ export default {
 	emits:["update:page","update:limit"]
 }
 </script>
+<style scoped>
+.table-operations {
+	box-sizing: border-box;
+	margin: 0px;
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	-moz-box-pack: justify;
+	justify-content: space-between;
+	-moz-box-align: center;
+	align-items: center;
+	overflow: visible;
+	overflow-x: visible;
+	height: 50px;
+	position: relative;
+	white-space: nowrap;
+}
+.change-page button{
+	appearance: none;
+	border: 0;
+	border-radius: 5px;
+	background: #4676D7;
+	color: #fff;
+	padding: 5px 20px;
+}
 
-	
+.change-page button:hover {
+  background: #1d49aa;
+}
+.change-page button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+</style>
