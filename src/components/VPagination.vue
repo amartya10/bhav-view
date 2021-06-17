@@ -68,13 +68,8 @@ export default {
 	justify-content: space-between;
 	height: 50px;
 	position: relative;
-
-
-	/* -moz-box-align: center;
-	align-items: center;
-	overflow: visible;
-	overflow-x: visible;
-	white-space: nowrap;  */
+	padding: 10px 0px;
+	margin: 10px 0px;
 }
 .change-page button{
 	appearance: none;
