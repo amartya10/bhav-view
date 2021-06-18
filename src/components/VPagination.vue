@@ -73,7 +73,7 @@ export default {
 	display: flex;
 	flex-flow: row nowrap;
 	-moz-box-pack: justify;
-	justify-content: space-between;
+	justify-content: flex-end;
 	height: 50px;
 	position: relative;
 	padding: 10px 0px;
