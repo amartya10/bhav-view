@@ -28,7 +28,7 @@ export default {
 header { 
 	display: flex;
 	flex-shrink: 0;	
-	padding: 20px;
+	padding: 20px 0;
 	background: #f8f8f87b;
 	color: black;
 	font-size: 24px;
