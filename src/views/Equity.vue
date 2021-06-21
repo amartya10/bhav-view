@@ -49,39 +49,49 @@ export default {
 				},
 				{
 					name:'Prev',
-					value:"PREVCLOSE"
+					value:"PREVCLOSE",
+					type :"price",
 				},
 				{
 					name:'Open',
-					value:"OPEN"
+					value:"OPEN",
+					type :"price",
+
 				},
 				{
 					name:'High',
-					value:"HIGH"
+					value:"HIGH",
+					type :"price",
 				},
 				{
 					name:'Low',
-					value:"LOW"
+					value:"LOW",
+					type :"price",					
 				},
 				{
 					name:'Close',
-					value:"CLOSE"
+					value:"CLOSE",
+					type :"price",
 				},
 				{
 					name:'Last',
-					value:"LAST"
+					value:"LAST",
+					type :"price",
 				},
 				{
 					name:'Shares',
-					value:"NO_OF_SHRS"
+					value:"NO_OF_SHRS",
+					type: "number",
 				},
 				{
 					name:'Turnover',
-					value:"NET_TURNOV"
+					value:"NET_TURNOV",
+					type: "number",
 				},
 				{
 					name:'Trades',
-					value:"NO_TRADES"
+					value:"NO_TRADES",
+					type: "number",
 				},
 			],
 		}

@@ -13,7 +13,7 @@
 				<tbody>
 					<tr v-for = "item in items" :key="item.SC_CODE">
 						<td> <input type="checkbox" :key ="'select'" :value="item.SC_CODE" @change="$emit('select',$event.target.value)"> </td>
-						<td :data-label="header.name" v-for = "header in headers" :key="header" > {{ item[header.value] }}</td>
+						<td :class="header.type ?? header.type" :data-label="header.name" v-for = "header in headers" :key="header" > {{ item[header.value] }}</td>
 					</tr>
 				</tbody>
 			</table>
@@ -90,6 +90,9 @@ tr {
 {
     text-align: left;
 
+}
+.price::before{
+	content: "₹ ";
 }</style>
 <!-- 
 RENDERE DATA 
