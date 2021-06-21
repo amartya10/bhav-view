@@ -48,10 +48,6 @@ export default {
 					value:"SC_NAME"
 				},
 				{
-					name:'Group',
-					value:"SC_GROUP"
-				},
-				{
 					name:'Prev',
 					value:"PREVCLOSE"
 				},
