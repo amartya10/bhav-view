@@ -1,12 +1,12 @@
 <template>
 	<div>
-		<div v-if="items" class="table">
+		<div v-if="items" class="containerTable">
 			<table class="table">
 				<thead>
 					<tr>
 						<th>#<span class="resize-handle"></span></th>
-						<th v-for="(header,index) in headers" :key="index"> {{header.name }}
-							<span class="resize-handle"></span>
+						<th v-bind:style = "header.testAlign == 'left' ?  'text-align=left' : pass" v-for="(header,index) in headers" :key="index"> {{header.name }}
+							<!-- <span class="resize-handle"></span> -->
 						</th>
 					</tr>
 				</thead>
@@ -44,6 +44,15 @@ export default {
 </script>
 
 <style>
+
+.containerTable {
+    border: 1px solid rgb(236, 239, 241);
+    box-shadow: rgb(17 51 83 / 2%) 0px 4px 12px 0px;
+    width: auto;
+    border-radius: 0px;
+    overflow-x: auto;
+}
+
 .table {
 	width: 100%;
 	padding: 0px;
@@ -51,11 +60,37 @@ export default {
 	border-spacing: 0px;
 	border-collapse: separate;
 	caption-side: top;
+	margin: auto;
+    font-size: 14px;
+    width: 100%;
 }
+thead {
+	position: relative;
+    z-index: 120;
+	display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+	}
 tr {
 	text-align: right;
-}
-</style>
+}	
+
+.table th:nth-child(1),
+.table th:nth-child(2),
+.table th:nth-child(3), 
+.table td:nth-child(1), 
+.table td:nth-child(2), 
+.table td:nth-child(3)
+{
+    text-align: left;
+
+}</style>
 <!-- 
 RENDERE DATA 
 SHOW PAGINATED  

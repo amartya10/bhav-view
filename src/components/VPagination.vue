@@ -145,10 +145,7 @@ select {
 	border-radius: 0px;
 	height: 100%;
 	width: 100%;
-	background: #c5d0e7;
 
 }
-select option {
-	background: #c5d0e7;
-}
+
 </style>
