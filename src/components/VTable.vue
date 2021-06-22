@@ -96,10 +96,12 @@ th tr {
 }
 
 td,th {
+	border-bottom: 1px solid rgb(168, 168, 168);
 	color: #333333;
 	font: 400 15px 'Ubuntu', sans-serif;
     padding: 10px;
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
+	line-height: 1.3;
 }
 </style>
 <!-- 
