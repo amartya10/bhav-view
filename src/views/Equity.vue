@@ -177,6 +177,7 @@ export default {
 .marketSearch{
 	display: grid;
     grid-template-columns: 1fr 1fr;
+	height:50px;
 
 }
 .market-date{
@@ -198,7 +199,7 @@ export default {
 	height: 100%;
 	width: 100%;
 	font-size: 24px;
-	text-indent: 8px;
+	text-indent: 2%;
 }
 
 </style>
