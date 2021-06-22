@@ -68,7 +68,6 @@ export default {
 <style scoped>
 .table-operations {
 	box-sizing: border-box;
-	margin: 0px;
 	width: 100%;
 	display: flex;
 	flex-flow: row nowrap;
@@ -77,7 +76,6 @@ export default {
 	height: 50px;
 	position: relative;
 	padding: 10px 0px;
-	margin: 10px 0px;
 }
 .change-page{
 	display: flex;

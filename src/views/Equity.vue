@@ -11,9 +11,11 @@
 					</div>
 				</div>
 				<input v-model="date" type="date" name="EquityDate" :max="maxDate()">
-				<button @click="exportE">Export</button>
-				<VPagination v-model:page="page"  v-model:limit="limit" v-model:count="count" style="width: auto">
-				</VPagination>
+				<div class = "flex ">
+					<button class="item" @click="exportE">Export</button>
+					<VPagination v-model:page="page"  v-model:limit="limit" v-model:count="count" style="width: auto"></VPagination>
+				</div>
+
 				<VTable :headers="headers" :items="equities" @select="select"></VTable>
 			</section>
 		</main>
@@ -200,6 +202,19 @@ export default {
 	width: 100%;
 	font-size: 24px;
 	text-indent: 2%;
+}
+.flex {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0px;
+    margin: 10px 0px;
+}
+.flex .item {
+	margin: 0 5px;
+	height: 30px;
+	align-self: center;
+	width: 100px;
+	border: 1px solid #999999;
 }
 
 </style>
