@@ -79,7 +79,7 @@ th {
 	}
 tr {
 	text-align: right;
-}	
+}
 
 .table th:nth-child(1),
 .table th:nth-child(2),
@@ -91,8 +91,17 @@ tr {
     text-align: left;
 
 }
-.price::before{
-}</style>
+th tr {
+	text-align: right;
+}
+
+td,th {
+	color: #333333;
+	font: 400 15px 'Ubuntu', sans-serif;
+    padding: 10px;
+    border: 1px solid transparent;
+}
+</style>
 <!-- 
 RENDERE DATA 
 SHOW PAGINATED  
