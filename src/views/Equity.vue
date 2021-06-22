@@ -198,7 +198,7 @@ export default {
 	height: 100%;
 	width: 100%;
 	font-size: 24px;
-	padding: 0px 15px;
+	/* padding: 0px 15px; */
 
 }
 
