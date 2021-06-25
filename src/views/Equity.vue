@@ -179,31 +179,34 @@ export default {
     background: rgb(255, 255, 255) none repeat scroll 0% 0%;
 }
 .marketSearch{
-	display: grid;
-    grid-template-columns: 1fr 1fr;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
 	height:50px;
 
 }
 .market-date{
 	/* border: 1px solid rgb(236, 239, 241); */
 	box-shadow: rgba(17, 51, 83, 0.02) 0px 4px 12px 0px;
-	width: auto;
 	border-radius: 0px;
 	overflow-x: auto;
 	font-size: 24px;
 	font-weight: 500;
 }
 .market-search{
-	width:auto;
 	border: 1px solid rgb(236, 239, 241);
 	font-size: 24px;
+	height: 100%;
 }
 .market-search-input {
 	text-align: left;
 	height: 100%;
-	width: 100%;
 	font-size: 24px;
-	text-indent: 2%;
+	text-indent: 4%;
+	border:none
+}
+.market-search-input:focus{
+    outline: none;
 }
 .flex {
 	display: flex;
@@ -216,14 +219,12 @@ export default {
 	height: 30px;
 	align-self: center;
 	width: 100px;
-	border: 1px solid #999999;
 }
 button {
-
 	appearance: none;
 	border: 0;
 	width: 100%;
-	border-radius: 0px;
+	border-radius: 2px;
 	background: #4676D7;
 	color: #fff;
 	padding: 5px 20px;
