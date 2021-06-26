@@ -5,7 +5,7 @@
 				<thead>
 					<tr>
 						<th>#<span class="resize-handle"></span></th>
-						<th v-bind:style = "header.testAlign == 'left' ?  'text-align=left' : pass" v-for="(header,index) in headers" :key="index"> {{header.name }}
+						<th v-bind:style = "header.testAlign == 'left' ?  'text-align=left' : 'text-align=right'" v-for="(header,index) in headers" :key="index"> {{header.name }}
 							<!-- <span class="resize-handle"></span> -->
 						</th>
 					</tr>
@@ -103,6 +103,8 @@ td,th {
     /* border: 1px solid transparent; */
 	line-height: 1.3;
 }
+
+
 </style>
 <!-- 
 RENDERE DATA 

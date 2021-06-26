@@ -83,6 +83,11 @@ export default {
 					type :"price",
 				},
 				{
+					name:'%Change',
+					value:"CHANGE",
+					type :"number",
+				},
+				{
 					name:'Shares',
 					value:"NO_OF_SHRS",
 					type: "number",
@@ -109,7 +114,7 @@ export default {
 		limit(){
 
 			if (this.page ===  1){
-				console.log("limit")
+				// console.log("limit")
 
 				this.getEquities()
 			}else{
@@ -117,7 +122,7 @@ export default {
 			}		
 		},
 		page(){
-			console.log("page")
+			// console.log("page")
 			this.getEquities()
 		},
 		date(){

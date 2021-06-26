@@ -36,7 +36,7 @@ const BASE_URL ='http://127.0.0.1:8000/';
 // }
 
 export  function getEquties(params){
-	console.log(params)
+	// console.log(params)
 	let date,query,limit,page = undefined
 	if (params){
 		query = params.query
@@ -80,11 +80,11 @@ export  function exportEquities(date,data){
 	}
 
 	url = url + 'export'
-	console.log(data)
+	// console.log(data)
 
 	try {
 		axios.post(url,data).then((response)=>{
-			console.log(response.data)
+			// console.log(response.data)
 
 			var fileURL = window.URL.createObjectURL(new Blob([response.data]));
 

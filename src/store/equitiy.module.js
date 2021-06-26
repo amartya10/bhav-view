@@ -32,15 +32,20 @@ const getters = {
 	},
 	isLoading(state){
 		return state.isLoading;
-	}
+	},
 };
 
 const actions = {
 
 	fetch({commit},data){
 		commit('startFetch');
+		var change =  (a,b) => ((a - b)/b) * 100
 		return getEquties(data)
 			.then((data) => {
+				console.log(data);
+				data.equities.forEach(element => {			
+					element["CHANGE"] = change(element["CLOSE"],element["OPEN"]).toFixed(2)
+				});
 				commit('endFetch',data);
 			})
 			.catch(error=>{
@@ -48,7 +53,6 @@ const actions = {
 			})
 	},
 	exporte({state},date){
-
 		return exportEquities(date,Array.from(state.selected))	
 	}
  }
