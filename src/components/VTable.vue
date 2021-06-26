@@ -13,7 +13,13 @@
 				<tbody>
 					<tr v-for = "item in items" :key="item.SC_CODE">
 						<td> <input type="checkbox" :key ="'select'" :value="item.SC_CODE" @change="$emit('select',$event.target.value)"> </td>
-						<td :class="header.type ?? header.type" :data-label="header.name" v-for = "header in headers" :key="header" > {{ $filters.formatValue(item[header.value],header.type ? header.type :undefined) }}</td>
+						<td :class="header.type ?? header.type" :data-label="header.name" v-for = "header in headers" :key="header">
+							<!-- <img
+							v-if="header.name == 'Name'"
+							:src="`https://companiesmarketcap.com//img/company-logos/80/${item[header.value].toUpperCase()}.png`"
+							/> -->
+							<span>{{ $filters.formatValue(item[header.value],header.type ? header.type :undefined) }}</span>
+						</td>
 					</tr>
 				</tbody>
 			</table>

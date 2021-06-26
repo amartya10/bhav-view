@@ -68,7 +68,6 @@ export default {
 <style scoped>
 .table-operations {
 	box-sizing: border-box;
-	width: 100%;
 	display: flex;
 	flex-flow: row nowrap;
 	-moz-box-pack: justify;
